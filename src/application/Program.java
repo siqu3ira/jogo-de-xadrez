@@ -2,11 +2,13 @@ package application;
 
 import tabuleiro.Posicao;
 import tabuleiro.Tabuleiro;
+import xadrez.Partida;
 
 public class Program {
 
     public static void main(String[] args) {
 
-        var tabuleiro = new Tabuleiro(8, 8);
+        Partida partida = new Partida();
+        UI.printTabuleiro(partida.getPecas());
     }
 }

@@ -50,8 +50,13 @@ public class Partida {
     }
 
     private void validacaoDaPosicaoDeOrigem(Posicao posicao) {
+
         if(!tabuleiro.temUmaPeca(posicao)) {
             throw new ExcecaoDeXadrez("Não tem nenhuma peça na posicao de origem.");
+        }
+
+        if(!tabuleiro.peca(posicao).existeAlgumMovimentoPossivel()) {
+            throw new ExcecaoDeXadrez("Não existem movimentos possíceis para a peça escolhida.");
         }
     }
 

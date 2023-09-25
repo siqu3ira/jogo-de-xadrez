@@ -28,9 +28,13 @@ public class Partida {
         return matriz;
     }
 
+    private void colocarNovaPeca(char coluna , int linha, PecaDeXadrez peca) {
+        tabuleiro.ColocarPeca(peca, new PosicaoDeXadrez(coluna, linha).toPosition());
+    }
+
     private void setupInicial() {
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.BRANCO), new Posicao(2, 1));
-        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.PRETO), new Posicao(0, 4));
-        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.BRANCO), new Posicao(7, 4));
+        colocarNovaPeca('b', 6, new Torre(tabuleiro, Cor.BRANCO));
+        colocarNovaPeca('e', 8, new Rei(tabuleiro, Cor.PRETO));
+        colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
     }
 }

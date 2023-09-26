@@ -29,6 +29,13 @@ public class Partida {
         return matriz;
     }
 
+    public boolean[][] possiveisMovimentos(PosicaoDeXadrez posicaoDeOrigem) {
+        Posicao posicao = posicaoDeOrigem.toPosition();
+        validacaoDaPosicaoDeOrigem(posicao);
+
+        return tabuleiro.peca(posicao).movimentosPossiveis();
+    }
+
     public PecaDeXadrez performarMovimento(PosicaoDeXadrez posicaoDeOrigem, PosicaoDeXadrez posicaoDeDestino) {
 
         var origem = posicaoDeOrigem.toPosition();
@@ -67,8 +74,7 @@ public class Partida {
         }
     }
 
-
-        private void colocarNovaPeca(char coluna , int linha, PecaDeXadrez peca) {
+    private void colocarNovaPeca(char coluna , int linha, PecaDeXadrez peca) {
         tabuleiro.colocarPeca(peca, new PosicaoDeXadrez(coluna, linha).toPosition());
     }
 

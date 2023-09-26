@@ -24,6 +24,11 @@ public class Program {
             System.out.println();
             System.out.println("Origem: ");
             var origem = UI.lerPosicaoDeXadrez(sc);
+
+            boolean[][] movimentosPossiveis = partida.possiveisMovimentos(origem);
+            UI.limparTela();
+            UI.printTabuleiro(partida.getPecas(), movimentosPossiveis);
+
             System.out.println();
             System.out.println("Destino: ");
             var destino = UI.lerPosicaoDeXadrez(sc);

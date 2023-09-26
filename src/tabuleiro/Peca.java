@@ -1,5 +1,7 @@
 package tabuleiro;
 
+import xadrez.PecaDeXadrez;
+
 public abstract class Peca {
 
     protected Posicao posicao;
@@ -16,7 +18,7 @@ public abstract class Peca {
 
     public abstract boolean[][] movimentosPossiveis();
 
-    public boolean possivelMovimento(Posicao posicao) {
+    public boolean movimentoPossivel(Posicao posicao) {
         return movimentosPossiveis()[posicao.getLinha()][posicao.getColuna()];
     }
 

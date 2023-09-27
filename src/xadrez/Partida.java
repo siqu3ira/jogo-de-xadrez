@@ -88,7 +88,8 @@ public class Partida {
 
     private Peca fazerMovimento(Posicao origem, Posicao destino) {
 
-        var peca = tabuleiro.removerUmaPeca(origem);
+        PecaDeXadrez peca = (PecaDeXadrez)tabuleiro.removerUmaPeca(origem);
+        peca.incrementarNumeroDeJogadas();
         var pecaCapturada = tabuleiro.removerUmaPeca(destino);
         tabuleiro.colocarPeca(peca, destino);
 
@@ -101,7 +102,8 @@ public class Partida {
     }
 
     private void desfazerMovimento(Posicao origem, Posicao destino, Peca pecaCapturada) {
-        Peca p = tabuleiro.removerUmaPeca(destino);
+        PecaDeXadrez p = (PecaDeXadrez)tabuleiro.removerUmaPeca(destino);
+        p.decrementarNumeroDeJogadas();
         tabuleiro.colocarPeca(p, origem);
 
         if (pecaCapturada != null) {

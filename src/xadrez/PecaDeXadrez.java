@@ -7,6 +7,7 @@ import tabuleiro.Tabuleiro;
 public abstract class PecaDeXadrez extends Peca {
 
     private Cor cor;
+    private int numeroDeJogadas;
 
     public PecaDeXadrez(Tabuleiro tabuleiro, Cor cor) {
         super(tabuleiro);
@@ -15,6 +16,18 @@ public abstract class PecaDeXadrez extends Peca {
 
     public Cor getCor() {
         return cor;
+    }
+
+    public int getNumeroDeJogadas() {
+        return numeroDeJogadas;
+    }
+
+    public void incrementarNumeroDeJogadas() {
+        numeroDeJogadas++;
+    }
+
+    public void decrementarNumeroDeJogadas() {
+        numeroDeJogadas--;
     }
 
     protected boolean temUmaPecaInimiga(Posicao position) {

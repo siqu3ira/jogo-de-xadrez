@@ -58,10 +58,21 @@ public class UI {
         printPecasCapturadas(pecasCapturadas);
         System.out.println();
         System.out.println("Turno: " + partida.getTurno());
-        System.out.println("Vez do time: " + partida.getJogadorAtual());
-        if (partida.getCheck()) {
-            System.out.println("CHECK!!");
+
+        if(!partida.getCheckMate()) {
+            System.out.println("Vez do time: " + partida.getJogadorAtual());
+
+            if (partida.getCheck()) {
+                System.out.println("CHECK!!");
+            }
+        } else {
+            System.out.println("CHECKMATE!!");
+            System.out.println("Vencedor: " + partida.getJogadorAtual());
         }
+
+
+
+
     }
 
     public static void printTabuleiro(PecaDeXadrez[][] pecas) {

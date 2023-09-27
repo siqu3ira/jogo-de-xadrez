@@ -60,7 +60,7 @@ public class UI {
         System.out.println("Turno: " + partida.getTurno());
 
         if(!partida.getCheckMate()) {
-            System.out.println("Vez do time: " + partida.getJogadorAtual());
+            System.out.println("Vez das peças: " + partida.getJogadorAtual());
 
             if (partida.getCheck()) {
                 System.out.println("CHECK!!");
@@ -109,7 +109,7 @@ public class UI {
             System.out.print("-" + ANSI_RESET);
         }
         else {
-            if (peca.getCor() == Cor.BRANCO) {
+            if (peca.getCor() == Cor.BRANCA) {
                 System.out.print(ANSI_WHITE + peca + ANSI_RESET);
             }
             else {
@@ -120,8 +120,8 @@ public class UI {
     }
 
     private static void printPecasCapturadas(List<PecaDeXadrez> pecasCapturadas) {
-        List<PecaDeXadrez> brancas = pecasCapturadas.stream().filter(x -> x.getCor() == Cor.BRANCO).toList();
-        List<PecaDeXadrez> pretas = pecasCapturadas.stream().filter(x -> x.getCor() == Cor.PRETO).toList();
+        List<PecaDeXadrez> brancas = pecasCapturadas.stream().filter(x -> x.getCor() == Cor.BRANCA).toList();
+        List<PecaDeXadrez> pretas = pecasCapturadas.stream().filter(x -> x.getCor() == Cor.PRETA).toList();
 
         System.out.println("- Peças capturadas: ");
         System.out.print("-> Brancas: ");

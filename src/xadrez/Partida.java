@@ -23,7 +23,7 @@ public class Partida {
     public Partida() {
         tabuleiro = new Tabuleiro(8, 8);
         turno = 1;
-        jogadorAtual = Cor.BRANCO;
+        jogadorAtual = Cor.BRANCA;
         setupInicial();
     }
 
@@ -135,11 +135,11 @@ public class Partida {
 
     private void proximoTurno() {
         turno ++;
-        jogadorAtual = (jogadorAtual == Cor.BRANCO) ? Cor.PRETO : Cor.BRANCO;
+        jogadorAtual = (jogadorAtual == Cor.BRANCA) ? Cor.PRETA : Cor.BRANCA;
     }
 
     private Cor oponente(Cor cor) {
-        return (cor == Cor.BRANCO) ? Cor.PRETO : Cor.BRANCO;
+        return (cor == Cor.BRANCA) ? Cor.PRETA : Cor.BRANCA;
     }
 
     private PecaDeXadrez rei(Cor cor) {
@@ -204,11 +204,11 @@ public class Partida {
 
     private void setupInicial() {
 
-        colocarNovaPeca('h', 7, new Torre(tabuleiro, Cor.BRANCO));
-        colocarNovaPeca('d', 1, new Torre(tabuleiro, Cor.BRANCO));
-        colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCO));
+        colocarNovaPeca('h', 7, new Torre(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('d', 1, new Torre(tabuleiro, Cor.BRANCA));
+        colocarNovaPeca('e', 1, new Rei(tabuleiro, Cor.BRANCA));
 
-        colocarNovaPeca('b', 8, new Torre(tabuleiro, Cor.PRETO));
-        colocarNovaPeca('a', 8, new Rei(tabuleiro, Cor.PRETO));
+        colocarNovaPeca('b', 8, new Torre(tabuleiro, Cor.PRETA));
+        colocarNovaPeca('a', 8, new Rei(tabuleiro, Cor.PRETA));
     }
 }

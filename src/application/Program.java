@@ -14,8 +14,12 @@ public class Program {
     public static void main(String[] args) {
 
 
-        System.out.println("R = Torre");
-        System.out.println("K = Rei");
+        System.out.println("T = Torre");
+        System.out.println("C = Cavalo");
+        System.out.println("B = Bispo");
+        System.out.println("r = Rainha");
+        System.out.println("R = Rei");
+        System.out.println("P = Peão");
         Scanner sc = new Scanner(System.in);
         Partida partida = new Partida();
         List<PecaDeXadrez> pecasCapturadas = new ArrayList<>();

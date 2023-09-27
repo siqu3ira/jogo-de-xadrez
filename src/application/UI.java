@@ -84,7 +84,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println("   a   b   c   d   e    f   g   h");
+        System.out.println("   a   b   c   d   e   f   g   h");
     }
 
     public static void printTabuleiro(PecaDeXadrez[][] pecas, boolean[][] movimentosPossiveis) {
@@ -96,7 +96,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println("   a   b   c   d   e    f   g   h");
+        System.out.println("   a   b   c   d   e   f   g   h");
     }
 
     private static void printPeca(PecaDeXadrez peca, boolean fundo) {

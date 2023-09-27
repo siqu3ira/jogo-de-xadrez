@@ -60,7 +60,7 @@ public class UI {
         System.out.println("Turno: " + partida.getTurno());
 
         if(!partida.getCheckMate()) {
-            System.out.println("Vez das peças: " + partida.getJogadorAtual());
+            System.out.println("Vez das peças: " + partida.getJogadorAtual() + "S");
 
             if (partida.getCheck()) {
                 System.out.println("CHECK!!");
@@ -96,7 +96,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println("  a b c d e f g h");
+        System.out.println("   a   b   c   d   e    f   g   h");
     }
 
     private static void printPeca(PecaDeXadrez peca, boolean fundo) {

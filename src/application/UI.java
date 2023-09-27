@@ -84,7 +84,7 @@ public class UI {
             }
             System.out.println();
         }
-        System.out.println("  a b c d e f g h");
+        System.out.println("   a   b   c   d   e    f   g   h");
     }
 
     public static void printTabuleiro(PecaDeXadrez[][] pecas, boolean[][] movimentosPossiveis) {
@@ -106,14 +106,14 @@ public class UI {
         }
 
         if (peca == null) {
-            System.out.print("-" + ANSI_RESET);
+            System.out.print(" - " + ANSI_RESET);
         }
         else {
             if (peca.getCor() == Cor.BRANCA) {
-                System.out.print(ANSI_WHITE + peca + ANSI_RESET);
+                System.out.print(" " + ANSI_WHITE + peca + ANSI_RESET + " ");
             }
             else {
-                System.out.print(ANSI_YELLOW + peca + ANSI_RESET);
+                System.out.print(" " + ANSI_YELLOW + peca + ANSI_RESET + " ");
             }
         }
         System.out.print(" ");

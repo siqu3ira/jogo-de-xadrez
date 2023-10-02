@@ -47,6 +47,12 @@ public class Program {
                 pecasCapturadas.add(pecaCapturada);
             }
 
+            if (partida.getPromocao() != null) {
+                System.out.print("Qual peça você quer o peão seja promovida para? (r/C/B/T): ");
+                String tipo = sc.nextLine();
+                partida.trocarPecaPromovida(tipo);
+            }
+
             } catch (ExcecaoDeXadrez e) {
                 System.out.println(e.getMessage());
                 sc.nextLine();

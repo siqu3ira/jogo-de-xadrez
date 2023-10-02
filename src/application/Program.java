@@ -50,6 +50,12 @@ public class Program {
             if (partida.getPromocao() != null) {
                 System.out.print("Qual peça você quer o peão seja promovida para? (r/C/B/T): ");
                 String tipo = sc.nextLine();
+
+                while (!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("T") && !tipo.equals("r")) {
+                    System.out.print("Valor inválido! Qual peça você quer o peão seja promovida para? (r/C/B/T):");
+                    tipo = sc.nextLine();
+
+                }
                 partida.trocarPecaPromovida(tipo);
             }
 
